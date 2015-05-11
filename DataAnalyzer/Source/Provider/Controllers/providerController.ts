@@ -4,7 +4,7 @@
     interface IProviderController extends ng.IScope {
         providersList: any;
     }
-    class Stockstore {
+    class ProviderController {
 
         providersList: Array<da.service.IProviderService>;
         static $inject = ['da.service.providerService', '$scope'];
@@ -19,5 +19,5 @@
             });
         }
     }
-    angular.module('da.controllers').controller('da.controllers.providerController', Stockstore);
+    angular.module('da.controllers').controller('da.controller.providerController', ProviderController);
 }

@@ -3,8 +3,8 @@ var da;
     var controller;
     (function (controller) {
         'use strict';
-        var ProviderController = (function () {
-            function ProviderController(stockstoreService, $scope) {
+        var Stockstore = (function () {
+            function Stockstore(stockstoreService, $scope) {
                 //$scope.providersList = '[{"source_code":"UHERO","source_id":3},{"source_code":"NSE","source_id":33},{"source_code":"BCB","source_id":35}]';
                 this.stockstoreService = stockstoreService;
                 this.$scope = $scope;
@@ -13,10 +13,10 @@ var da;
                     $scope.providersList = response;
                 });
             }
-            ProviderController.$inject = ['da.service.providerService', '$scope'];
-            return ProviderController;
+            Stockstore.$inject = ['da.service.providerService', '$scope'];
+            return Stockstore;
         })();
-        angular.module('da.controllers').controller('da.controller.providerController', ProviderController);
+        angular.module('da.controllers').controller('da.controllers.providerController', Stockstore);
     })(controller = da.controller || (da.controller = {}));
 })(da || (da = {}));
 //# sourceMappingURL=providerController.js.map
