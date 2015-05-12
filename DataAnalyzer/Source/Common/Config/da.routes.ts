@@ -1,4 +1,5 @@
-﻿module application.routes {
+﻿'use strict';
+module application.routes {
     export class Route {
         static $inject = ["$routeProvider"];
 
@@ -24,5 +25,5 @@
 
 
         }
-
+    }
     } 
