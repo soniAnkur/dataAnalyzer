@@ -5,7 +5,7 @@
         stockssList: any;
     }
     class StocksController {
-        static $inject = ['da.service.providerService', '$scope'];
+        static $inject = ['da.service.stockService', '$scope'];
 
         constructor(private stockstoreService: da.service.IStockService, private $scope: IStockController) {
 

@@ -1,0 +1,9 @@
+E:\may15\DataAnalyzer\DataAnalyzer\DataAnalyzer\bin\DataAnalyzer.dll.config
+E:\may15\DataAnalyzer\DataAnalyzer\DataAnalyzer\bin\DataAnalyzer.dll
+E:\may15\DataAnalyzer\DataAnalyzer\DataAnalyzer\bin\DataAnalyzer.pdb
+E:\may15\DataAnalyzer\DataAnalyzer\DataAnalyzer\bin\DataAnalyzer.xml
+E:\may15\DataAnalyzer\DataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.Resources.resources
+E:\may15\DataAnalyzer\DataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.vbproj.GenerateResource.Cache
+E:\may15\DataAnalyzer\DataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.dll
+E:\may15\DataAnalyzer\DataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.xml
+E:\may15\DataAnalyzer\DataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.pdb

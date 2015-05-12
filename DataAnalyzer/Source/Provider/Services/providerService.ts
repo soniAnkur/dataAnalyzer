@@ -1,8 +1,6 @@
-﻿//this service is responsible for getting list of all providers
-
-module da.service {
+﻿
 'use strict'
-    export interface IProviderService {
+    export interface IProviderService  {
         getProviders(): ng.IPromise<Array<IStockProvider>>;
     }
 
@@ -11,7 +9,7 @@ module da.service {
         source_id: string;
     }
 
-    class StockProviderService implements IProviderService {
+    export class StockProviderService implements IProviderService {
         constructor(private $http: ng.IHttpService) {
             this.$http = $http;
         }
@@ -20,6 +18,7 @@ module da.service {
             return response.data;
             });
         }
+
     }
 
     factory.$inject = ['$http'];
@@ -29,4 +28,3 @@ module da.service {
     }
 
     angular.module('da.services').factory('da.service.providerService', factory);
-}

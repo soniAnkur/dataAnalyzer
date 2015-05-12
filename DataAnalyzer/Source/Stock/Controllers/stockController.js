@@ -12,7 +12,7 @@ var da;
                 //    $scope.stockssList = response;
                 //});
             }
-            StocksController.$inject = ['da.service.providerService', '$scope'];
+            StocksController.$inject = ['da.service.stockService', '$scope'];
             return StocksController;
         })();
         angular.module('da.controllers').controller('da.controller.stockController', StocksController);
