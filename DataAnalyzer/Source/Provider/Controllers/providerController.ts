@@ -1,23 +1,22 @@
-﻿module da.controller {
-    'use strict'
-
+﻿import service = require("../Services/providerService");
     interface IProviderController extends ng.IScope {
         providersList: any;
     }
-    class ProviderController {
+    export class ProviderController {
 
-        providersList: Array<da.service.IProviderService>;
-        static $inject = ['da.service.providerService', '$scope'];
+        static id: string = "da.controller.providerController";
 
-        constructor(private stockstoreService: da.service.IProviderService, private $scope: IProviderController) {
+        providersList: Array<service.IProviderService>;
+        static $inject = [service.StockProviderService.id, '$scope'];
+
+        constructor(private stockstoreService: service.IProviderService, private $scope: IProviderController) {
 
             //$scope.providersList = '[{"source_code":"UHERO","source_id":3},{"source_code":"NSE","source_id":33},{"source_code":"BCB","source_id":35}]';
 
             // var vm = this;
-            stockstoreService.getProviders().then((response: da.service.IStockProvider[]): void=> {
-                $scope.providersList = response;
+           stockstoreService.getProviders().then((response: any): void=> {
+              $scope.providersList = response;
             });
         }
     }
-    angular.module('da.controllers').controller('da.controller.providerController', ProviderController);
-}
+    angular.module('da.controllers').controller(ProviderController.id, ProviderController);

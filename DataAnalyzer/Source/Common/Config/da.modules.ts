@@ -1,5 +1,9 @@
-﻿((): void=> {
+
+﻿import route = require("Common/Config/da.routes");
+
+((): void=> {
     'use strict';
+
     angular.module('da', ['da.services', 'da.controllers', 'ngRoute'])
-        .config(application.routes.Route.configuration);
+        .config(route.Route.configuration);
 })(); 

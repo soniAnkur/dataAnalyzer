@@ -1,6 +1,8 @@
-﻿'use strict';
-module application.routes {
-    export class Route {
+
+﻿import ProviderController = require("Provider/Controllers/providerController");
+
+   export class Route {
+
         static $inject = ["$routeProvider"];
 
 
@@ -9,14 +11,14 @@ module application.routes {
 
                 .when("/providers", {
 
-                controller: "ss.controllers.Stockstore",
-                templateUrl: "views/providers.html"
+                controller: ProviderController.ProviderController.id,
+                templateUrl: "Provider/Partials/providers.html"
 
 
             }).when("/providers/:id", {
 
-                controller: "ss.controllers.StockstoreList",
-                templateUrl: "views/stock-list.html"
+                controller: "da.controller.stockController",
+                templateUrl: "../../Partials/providers.html"
 
             });
 
@@ -25,5 +27,6 @@ module application.routes {
 
 
         }
+
     }
-    } 
+
