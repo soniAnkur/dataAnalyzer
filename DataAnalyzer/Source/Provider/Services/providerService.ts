@@ -15,7 +15,7 @@
             this.$http = $http;
         }
         getProviders(): ng.IPromise<Array<IStockProvider>> {
-            return this.$http.get('http://192.168.158.133:5050/QuandlAAS/v1/providers/').then((response: ng.IHttpPromiseCallbackArg<IStockProvider[]>): IStockProvider[]=> {
+            return this.$http.get('http://192.168.158.111:5050/QuandlAAS/v1/providers/').then((response: ng.IHttpPromiseCallbackArg<IStockProvider[]>): IStockProvider[]=> {
             return response.data;
             });
         }

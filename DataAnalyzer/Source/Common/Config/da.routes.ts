@@ -1,6 +1,8 @@
 
 ﻿import ProviderController = require("Provider/Controllers/providerController");
 
+
+
    export class Route {
 
         static $inject = ["$routeProvider"];
@@ -13,7 +15,6 @@
 
                 controller: ProviderController.ProviderController.id,
                 templateUrl: "Provider/Partials/providers.html"
-
 
             }).when("/providers/:id", {
 
