@@ -1,7 +1,7 @@
 
 ﻿import ProviderController = require("Provider/Controllers/providerController");
 
-
+import StockController = require("Stock/Controllers/stockController");
 
    export class Route {
 
@@ -16,10 +16,10 @@
                 controller: ProviderController.ProviderController.id,
                 templateUrl: "Provider/Partials/providers.html"
 
-            }).when("/providers/:id", {
+                }).when("/providers/:providerId", {
 
-                controller: "da.controller.stockController",
-                templateUrl: "../../Partials/providers.html"
+                controller: StockController.StocksController.id,
+                templateUrl: "Stock/Partials/stocks.html"
 
             });
 

@@ -1,4 +1,4 @@
-define(["require", "exports", "Provider/Controllers/providerController"], function (require, exports, ProviderController) {
+define(["require", "exports", "Provider/Controllers/providerController", "Stock/Controllers/stockController"], function (require, exports, ProviderController, StockController) {
     var Route = (function () {
         function Route() {
         }
@@ -6,9 +6,9 @@ define(["require", "exports", "Provider/Controllers/providerController"], functi
             $routeProvider.when("/providers", {
                 controller: ProviderController.ProviderController.id,
                 templateUrl: "Provider/Partials/providers.html"
-            }).when("/providers/:id", {
-                controller: "da.controller.stockController",
-                templateUrl: "../../Partials/providers.html"
+            }).when("/providers/:providerId", {
+                controller: StockController.StocksController.id,
+                templateUrl: "Stock/Partials/stocks.html"
             });
             $routeProvider.otherwise({ redirectTo: "/providers" });
         };

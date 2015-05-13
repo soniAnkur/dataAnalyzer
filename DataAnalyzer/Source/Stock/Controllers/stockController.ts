@@ -1,20 +1,26 @@
-﻿module da.controller {
+﻿import service = require("../Services/stockService");
     'use strict'
 
     interface IStockController extends ng.IScope {
         stockssList: any;
     }
-    class StocksController {
-        static $inject = ['da.service.stockService', '$scope'];
 
-        constructor(private stockstoreService: da.service.IStockService, private $scope: IStockController) {
+    interface IRouteInfo extends ng.route.IRouteParamsService {
+        providerId: string;
+    }
 
+    export class StocksController {
+
+        static id: string = "da.controller.stockController";
+
+        static $inject = [service.StockService.id, '$scope','$routeParams'];
+
+        constructor(private stockstoreService: service.IStockService, private $scope: IStockController, $routeParams: IRouteInfo) {
             $scope.stockssList = '';
 
-            //stockstoreService.getStocksByProvider().then((response: da.service.IStockProvider[]): void=> {
-            //    $scope.stockssList = response;
-            //});
+            stockstoreService.getStocksByProvider($routeParams.providerId).then((response: any): void=> {
+                $scope.stockssList = response;
+            });
         }
     }
-    angular.module('da.controllers').controller('da.controller.stockController', StocksController);
-}
+    angular.module('da.controllers').controller(StocksController.id, StocksController);

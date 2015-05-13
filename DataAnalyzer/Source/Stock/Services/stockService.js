@@ -1,26 +1,23 @@
-//this service is responsible for getting list of all providers
-var da;
-(function (da) {
-    var service;
-    (function (service) {
-        'use strict';
-        var StockService = (function () {
-            function StockService($http) {
-                this.$http = $http;
-                this.$http = $http;
-            }
-            StockService.prototype.getStocksByProvider = function (providerId) {
-                return this.$http.get('http://192.168.158.133:5050/QuandlAAS/v1/providers/' + providerId + '/stocks').then(function (response) {
-                    return response.data;
-                });
-            };
-            return StockService;
-        })();
-        factory.$inject = ['$http'];
-        function factory($http) {
-            return new StockService($http);
+'use strict';
+define(["require", "exports"], function (require, exports) {
+    var StockService = (function () {
+        function StockService($http) {
+            this.$http = $http;
+            this.$http = $http;
         }
-        angular.module('da.services').factory('da.service.stockService', factory);
-    })(service = da.service || (da.service = {}));
-})(da || (da = {}));
+        StockService.prototype.getStocksByProvider = function (providerId) {
+            return this.$http.get('http://10.176.1.155:5050/QuandlAAS/v1/providers/' + providerId + '/stocks').then(function (response) {
+                return response.data;
+            });
+        };
+        StockService.id = "da.service.stockService";
+        return StockService;
+    })();
+    exports.StockService = StockService;
+    factory.$inject = ['$http'];
+    function factory($http) {
+        return new StockService($http);
+    }
+    angular.module('da.services').factory(StockService.id, factory);
+});
 //# sourceMappingURL=stockService.js.map
