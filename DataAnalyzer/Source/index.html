@@ -3,24 +3,44 @@
 <head>
     <title>Stock Store</title>
     <link rel="stylesheet" href="../Content/bootstrap.min.css">
+    <link rel="stylesheet" href="../Content/da-style.css">
+    
     <script data-main="da.require.config.js" src="../Scripts/require.js"></script>
+   
 </head>
 <body>
-
-
-    <nav class="navbar navbar-inverse" role="navigation">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Stock-Store</a>
-        </div>
-
-        <form role="search" class="navbar-form navbar-right">
-            <div class="form-group">
-                <input type="text" placeholder="Search" ng-model="searchText" class="form-control">
+    <div>
+        <section class="content-section video-section">
+            <div class="pattern-overlay">
+                <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=fdJc1_IBKJA',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
+                <div class="container">
+                    <div class="row">
+                        <div class="fixed" align="center">
+                            <div class="brand">Data Analyzer</div>
+                            <div class="address-bar">Get the data you need in the form you want</div>
+                            <div class="address-bar">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Search" ng-model="searchText" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </form>
-    </nav>
+        </section>
+    </div>
+
 
     <div ng-view></div>
 
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".player").mb_YTPlayer();
+
+        });
+    </script>
 </body>
 </html>

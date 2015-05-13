@@ -7,3 +7,12 @@ C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\Data
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.dll
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.xml
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.pdb
+E:\may15\gitworkspace\DataAnalyzer\bin\DataAnalyzer.dll.config
+E:\may15\gitworkspace\DataAnalyzer\bin\DataAnalyzer.dll
+E:\may15\gitworkspace\DataAnalyzer\bin\DataAnalyzer.pdb
+E:\may15\gitworkspace\DataAnalyzer\bin\DataAnalyzer.xml
+E:\may15\gitworkspace\DataAnalyzer\obj\Debug\DataAnalyzer.Resources.resources
+E:\may15\gitworkspace\DataAnalyzer\obj\Debug\DataAnalyzer.vbproj.GenerateResource.Cache
+E:\may15\gitworkspace\DataAnalyzer\obj\Debug\DataAnalyzer.dll
+E:\may15\gitworkspace\DataAnalyzer\obj\Debug\DataAnalyzer.xml
+E:\may15\gitworkspace\DataAnalyzer\obj\Debug\DataAnalyzer.pdb
