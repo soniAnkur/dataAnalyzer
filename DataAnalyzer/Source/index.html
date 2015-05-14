@@ -4,9 +4,6 @@
     <title>Stock Store</title>
     <link rel="stylesheet" href="../Content/bootstrap.min.css">
     <link rel="stylesheet" href="../Content/da-style.css">
-    
-    <script data-main="da.require.config.js" src="../Scripts/require.js"></script>
-   
 </head>
 <body>
     <div>
@@ -33,14 +30,15 @@
 
     <div ng-view></div>
 
+
+    <script data-main="da.require.config.js" src="../Scripts/require.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
     <script>
-        $(document).ready(function () {
-
+        angular.element(document).ready(function () {
             $(".player").mb_YTPlayer();
-
         });
+        
     </script>
 </body>
 </html>
