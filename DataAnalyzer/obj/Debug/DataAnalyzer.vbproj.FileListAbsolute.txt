@@ -1,9 +1,9 @@
-C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.Resources.resources
-C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.vbproj.GenerateResource.Cache
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\bin\DataAnalyzer.dll.config
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\bin\DataAnalyzer.dll
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\bin\DataAnalyzer.pdb
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\bin\DataAnalyzer.xml
+C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.Resources.resources
+C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.vbproj.GenerateResource.Cache
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.dll
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.xml
 C:\Users\mohiuddunahamad\Documents\Visual Studio 2013\Projects\dataAnalyzer\DataAnalyzer\obj\Debug\DataAnalyzer.pdb
