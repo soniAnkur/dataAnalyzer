@@ -1,14 +1,38 @@
-﻿<div class='col-sm-6 col-md-4 col-lg-3'>
-    <div class="text-center alert alert-success">
-        <div>
-            <strong>{{provider.source_code}}</strong>
-            <p>
-                {{provider.source_name}}
-            </p>
-            <p>
-                <a class='btn btn-primary' href="#/providers/{{provider.source_code}}" role='button'>Get Stock List</a>
-            </p>
+﻿<!--<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+
+    <div class="panel price panel-blue">
+        <div class="panel-heading arrow_box text-center">
+            <h3>{{provider.location}}</h3>
+        </div>
+
+        <ul class="list-group list-group-flush text-center alert alert-success" ng-repeat="ex in provider.exchange">
+            <li class="list-group-item label label-success"><i class="icon-ok text-info"></i>{{ex}}</li>
+        </ul>
+        <div class="panel-footer">
 
         </div>
     </div>
-</div>
+</div>-->
+
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+    <div class="offer offer-success">
+        <div class="shape">
+            <div class="shape-text">
+                top
+            </div>
+        </div>
+        <div class="offer-content">
+            <h3 class="lead">
+                {{provider.location | uppercase}}
+            </h3>
+            <div class="row">
+                <div class="exchange-margin">
+                    <span class="label label-success" style="margin-left:5px" ng-repeat="ex in provider.exchange">
+                        <a href="#/providers/{{ex}}">{{ex}}</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+       

@@ -1,86 +1,39 @@
-﻿<div class="container">
-    <div class="row">
-
-
-        <div id="accordion" class="panel-group">
-
-            <div class="panel panel-default">
-
-                <div class="panel-heading">
-
-                    <h4 class="panel-title">
-
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is HTML?</a>
-
-                    </h4>
-
-                </div>
-
-                <div id="collapseOne" class="panel-collapse collapse">
-
-                    <div class="panel-body">
-
-                        <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
-
+﻿<div class="container">    
+    <div class="row" >   
+        <accordion>
+            <accordion-group ng-repeat="docs in stocksList track by $index" is-open="docs.status.open">
+                <accordion-heading>
+                    {{docs.name}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down':docs.status.open, 'glyphicon-chevron-right': !docs.status.open}"></i>
+                </accordion-heading>
+                <blockquote>
+                    <p>Description</p>
+                    <footer>{{docs.description}}</footer>
+                </blockquote>
+                <blockquote>
+                    <p>Frequency</p>
+                    <footer>{{docs.frequency}}</footer>
+                </blockquote>
+                <blockquote>
+                    <p>From Date</p>
+                    <footer>{{docs.from_date}}</footer>
+                </blockquote>
+                <blockquote>
+                    <p>To Date</p>
+                    <footer>{{docs.to_date}}</footer>
+                </blockquote>
+                <button class="btn btn-default" ng-click="docs.status.isCollapsed = !docs.status.isCollapsed">Show Indexes</button>
+                <hr />
+                <div collapse="!docs.status.isCollapsed">
+                    <div class="well well-lg">
+                        <div class="row">
+                            <div class="col-md-2" ng-repeat="column in docs.column_names"><strong>{{column}}</strong></div>                            
+                        </div>
+                        <div class="row" ng-repeat="dataRow in docs.data track by $index">
+                            <div class="col-md-2" ng-repeat="data in dataRow track by $index">{{data}}</div>                            
+                        </div>
                     </div>
-
                 </div>
-
-            </div>
-
-            <div class="panel panel-default">
-
-                <div class="panel-heading">
-
-                    <h4 class="panel-title">
-
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. What is Bootstrap?</a>
-
-                    </h4>
-
-                </div>
-
-                <div id="collapseTwo" class="panel-collapse collapse in">
-
-                    <div class="panel-body">
-
-                        <p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="panel panel-default">
-
-                <div class="panel-heading">
-
-                    <h4 class="panel-title">
-
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. What is CSS?</a>
-
-                    </h4>
-
-                </div>
-
-                <div id="collapseThree" class="panel-collapse collapse">
-
-                    <div class="panel-body">
-
-                        <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="http://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-    <div class="row" ng-repeat="docs in stocksList track by $index">
-        
-        
+            </accordion-group>
+        </accordion>
     </div>
 </div>
