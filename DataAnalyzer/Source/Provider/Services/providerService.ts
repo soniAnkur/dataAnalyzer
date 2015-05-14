@@ -11,11 +11,11 @@
 
     export class StockProviderService implements IProviderService {
         static id: string = "da.service.providerService";
-        constructor(private $http: ng.IHttpService) {
+        constructor(private $http: ng.IHttpService ) {
             this.$http = $http;
         }
         getProviders(): ng.IPromise<Array<IStockProvider>> {
-            return this.$http.get('http://192.168.158.111:5050/QuandlAAS/v1/providers/').then((response: ng.IHttpPromiseCallbackArg<IStockProvider[]>): IStockProvider[]=> {
+            return this.$http.get('http://192.168.158.111:5050/QuandlAAS/v1/exchange/').then((response: ng.IHttpPromiseCallbackArg<IStockProvider[]>): IStockProvider[]=> {
             return response.data;
             });
         }

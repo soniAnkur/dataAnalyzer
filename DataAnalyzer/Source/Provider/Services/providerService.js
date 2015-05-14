@@ -6,7 +6,7 @@ define(["require", "exports"], function (require, exports) {
             this.$http = $http;
         }
         StockProviderService.prototype.getProviders = function () {
-            return this.$http.get('http://192.168.158.111:5050/QuandlAAS/v1/providers/').then(function (response) {
+            return this.$http.get('http://192.168.158.111:5050/QuandlAAS/v1/exchange/').then(function (response) {
                 return response.data;
             });
         };

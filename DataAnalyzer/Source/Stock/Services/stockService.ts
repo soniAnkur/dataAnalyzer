@@ -12,7 +12,7 @@
             this.$http = $http;
         }
         getStocksByProvider(providerId: string): ng.IPromise<Array<any>> {
-            return this.$http.get('http://10.176.1.155:5050/QuandlAAS/v1/providers/' + providerId + '/stocks').then((response: ng.IHttpPromiseCallbackArg<any>): any=> {
+            return this.$http.get('http://192.168.158.111:5050/QuandlAAS/v1/exchange/' + providerId + "/index").then((response: any): any=> {
                 return response.data;
             });
         }

@@ -4,9 +4,8 @@ define(["require", "exports", "../Services/stockService"], function (require, ex
         function StocksController(stockstoreService, $scope, $routeParams) {
             this.stockstoreService = stockstoreService;
             this.$scope = $scope;
-            $scope.stockssList = '';
             stockstoreService.getStocksByProvider($routeParams.providerId).then(function (response) {
-                $scope.stockssList = response;
+                $scope.stocksList = response;
             });
         }
         StocksController.id = "da.controller.stockController";
