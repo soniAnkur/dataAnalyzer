@@ -2,7 +2,7 @@ define(["require", "exports", "Provider/Controllers/providerController", "Stock/
     var Route = (function () {
         function Route() {
         }
-        Route.configuration = function ($routeProvider) {
+        Route.configuration = function ($routeProvider, RestangularProvider) {
             $routeProvider.when("/providers", {
                 controller: ProviderController.ProviderController.id,
                 templateUrl: "Provider/Partials/providers.html"
@@ -11,8 +11,9 @@ define(["require", "exports", "Provider/Controllers/providerController", "Stock/
                 templateUrl: "Stock/Partials/stocks.html"
             });
             $routeProvider.otherwise({ redirectTo: "/providers" });
+            RestangularProvider.setBaseUrl("http://10.176.2.88:5050/QuandlAAS/v1/exchange");
         };
-        Route.$inject = ["$routeProvider"];
+        Route.$inject = ["$routeProvider", "RestangularProvider"];
         return Route;
     })();
     exports.Route = Route;

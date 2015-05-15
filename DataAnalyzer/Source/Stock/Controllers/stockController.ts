@@ -1,4 +1,5 @@
-﻿import service = require("../Services/stockService");
+﻿///<reference path="../../../Scripts/typings/restangular/restangular.d.ts"/>
+import service = require("../Services/stockService");
 "use strict";
 
     interface IStockController extends ng.IScope {
@@ -13,14 +14,16 @@
 
         static id: string = "da.controller.stockController";
 
-        static $inject = [service.StockService.id, "$scope","$routeParams"];
+        static $inject = [service.StockService.id, "$scope", "$routeParams","Restangular"];
 
-        constructor(private stockstoreService: service.IStockService, private $scope: IStockController, $routeParams: IRouteInfo) {
+        constructor(private stockstoreService: service.IStockService, private $scope: IStockController, $routeParams: IRouteInfo, Restangular: restangular.IService) {
            
-            stockstoreService.getStocksByProvider($routeParams.providerId).then((response: any): void=> {
-                $scope.stocksList = response;
+            //stockstoreService.getStocksByProvider($routeParams.providerId).then((response: any): void=> {
+            //    $scope.stocksList = response;
                 
-            });
+            //});
+           $scope.stocksList = Restangular.one($routeParams.providerId,'index').getList().$object;
+            
         }
     }
     angular.module("da.controllers").controller(StocksController.id, StocksController);

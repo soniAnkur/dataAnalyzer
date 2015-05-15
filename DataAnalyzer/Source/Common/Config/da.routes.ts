@@ -1,14 +1,14 @@
-
+///<reference path="../../../Scripts/typings/restangular/restangular.d.ts"/>
 ﻿import ProviderController = require("Provider/Controllers/providerController");
 
 import StockController = require("Stock/Controllers/stockController");
 
    export class Route {
 
-        static $inject = ["$routeProvider"];
+        static $inject = ["$routeProvider","RestangularProvider"];
 
 
-        static configuration($routeProvider: ng.route.IRouteProvider) {
+        static configuration($routeProvider: ng.route.IRouteProvider, RestangularProvider: restangular.IProvider) {
             $routeProvider
 
                 .when("/providers", {
@@ -25,7 +25,7 @@ import StockController = require("Stock/Controllers/stockController");
 
             $routeProvider.otherwise({ redirectTo: "/providers" });
 
-
+            RestangularProvider.setBaseUrl("http://10.176.2.88:5050/QuandlAAS/v1/exchange");
 
         }
 

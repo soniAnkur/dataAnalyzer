@@ -1,15 +1,16 @@
 define(["require", "exports", "../Services/stockService"], function (require, exports, service) {
     "use strict";
     var StocksController = (function () {
-        function StocksController(stockstoreService, $scope, $routeParams) {
+        function StocksController(stockstoreService, $scope, $routeParams, Restangular) {
+            //stockstoreService.getStocksByProvider($routeParams.providerId).then((response: any): void=> {
+            //    $scope.stocksList = response;
             this.stockstoreService = stockstoreService;
             this.$scope = $scope;
-            stockstoreService.getStocksByProvider($routeParams.providerId).then(function (response) {
-                $scope.stocksList = response;
-            });
+            //});
+            $scope.stocksList = Restangular.one($routeParams.providerId, 'index').getList().$object;
         }
         StocksController.id = "da.controller.stockController";
-        StocksController.$inject = [service.StockService.id, "$scope", "$routeParams"];
+        StocksController.$inject = [service.StockService.id, "$scope", "$routeParams", "Restangular"];
         return StocksController;
     })();
     exports.StocksController = StocksController;
