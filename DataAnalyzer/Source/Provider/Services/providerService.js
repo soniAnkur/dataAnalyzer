@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 define(["require", "exports"], function (require, exports) {
     var StockProviderService = (function () {
         function StockProviderService($http) {
@@ -6,7 +6,7 @@ define(["require", "exports"], function (require, exports) {
             this.$http = $http;
         }
         StockProviderService.prototype.getProviders = function () {
-            return this.$http.get('http://192.168.158.129:5050/QuandlAAS/v1/exchange/location').then(function (response) {
+            return this.$http.get("http://192.168.158.130:5050/QuandlAAS/v1/exchange/location").then(function (response) {
                 return response.data;
             });
         };
@@ -14,10 +14,10 @@ define(["require", "exports"], function (require, exports) {
         return StockProviderService;
     })();
     exports.StockProviderService = StockProviderService;
-    factory.$inject = ['$http'];
+    factory.$inject = ["$http"];
     function factory($http) {
         return new StockProviderService($http);
     }
-    angular.module('da.services').factory(StockProviderService.id, factory);
+    angular.module("da.services").factory(StockProviderService.id, factory);
 });
 //# sourceMappingURL=providerService.js.map

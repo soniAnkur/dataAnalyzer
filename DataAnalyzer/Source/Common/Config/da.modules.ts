@@ -4,11 +4,11 @@
 import ProviderDirective = require("Provider/Directives/da.provider");
 
 ((): void=> {
-    'use strict';
+    "use strict";
 
-    angular.module('da', ['da.services', 'da.controllers', 'ngRoute','ui.bootstrap'])
-        .config(route.Route.configuration).directive('providerDirective',() => {
+    angular.module("da", ["da.services", "da.controllers", "ngRoute", "ui.bootstrap"])
+        .config(route.Route.configuration).directive("providerDirective",() => {
 
         return new ProviderDirective.DaProvider();
-})
+    });
 })(); 

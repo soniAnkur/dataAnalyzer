@@ -9,7 +9,4 @@ define(["require", "exports"], function (require, exports) {
     })();
     exports.DaProvider = DaProvider;
 });
-//angular.module('da').directive(DaProvider.id,() => {
-//    return new DaProvider();
-//});  
 //# sourceMappingURL=da.provider.js.map

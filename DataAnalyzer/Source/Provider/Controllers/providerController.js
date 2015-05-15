@@ -8,10 +8,10 @@ define(["require", "exports", "../Services/providerService"], function (require,
             });
         }
         ProviderController.id = "da.controller.providerController";
-        ProviderController.$inject = [service.StockProviderService.id, '$scope'];
+        ProviderController.$inject = [service.StockProviderService.id, "$scope"];
         return ProviderController;
     })();
     exports.ProviderController = ProviderController;
-    angular.module('da.controllers').controller(ProviderController.id, ProviderController);
+    angular.module("da.controllers").controller(ProviderController.id, ProviderController);
 });
 //# sourceMappingURL=providerController.js.map

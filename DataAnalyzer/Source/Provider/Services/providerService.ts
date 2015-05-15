@@ -1,5 +1,4 @@
-﻿
-'use strict'
+﻿"use strict";
     export interface IProviderService  {
         getProviders(): ng.IPromise<Array<IStockProvider>>;
     }
@@ -15,18 +14,18 @@
             this.$http = $http;
         }
         getProviders(): ng.IPromise<Array<IStockProvider>> {
- return this.$http.get('http://192.168.158.129:5050/QuandlAAS/v1/exchange/location').then((response: ng.IHttpPromiseCallbackArg<IStockProvider[]>): IStockProvider[]=> {
-
-            return response.data;
+            return this.$http.get("http://192.168.158.130:5050/QuandlAAS/v1/exchange/location")
+                .then((response: ng.IHttpPromiseCallbackArg<IStockProvider[]>): IStockProvider[]=> {
+                   return response.data;
             });
         }
 
     }
 
-    factory.$inject = ['$http'];
+    factory.$inject = ["$http"];
 
     function factory($http: ng.IHttpService): IProviderService {
         return new StockProviderService($http);
     }
 
-    angular.module('da.services').factory(StockProviderService.id, factory);
+    angular.module("da.services").factory(StockProviderService.id, factory);
